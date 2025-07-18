@@ -1,0 +1,31 @@
+{
+    "canisters": {
+        "backend": {
+            "type": "azle",
+            "main": "src/backend/index.ts",
+            "candid": ".azle/backend/index.did",
+            "declarations": {
+                "output": "src/declarations/backend",
+                "node_compatibility": true
+            }
+        },
+        "frontend": {
+            "dependencies": [
+                "backend"
+            ],
+            "source": [
+                "src/frontend/dist"
+            ],
+            "type": "assets",
+            "build": "dfx generate && npm run build --prefix src/frontend"
+        }
+    },
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": ""
+        }
+    },
+    "output_env_file": ".env",
+    "version": 1
+}
