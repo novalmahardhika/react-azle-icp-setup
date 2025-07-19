@@ -1,10 +1,13 @@
-import { Button } from "./components/ui/button"
+import { BrowserRouter, Route, Routes } from "react-router"
+import { ExampleAuth } from "./components/example-auth"
 
 function App() {
   return (
-    <section className="h-screen flex justify-center items-center">
-      <Button>Button</Button>
-    </section>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ExampleAuth />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

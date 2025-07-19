@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path';
 
-dotenv.config({ path: '../../../.env' });
+dotenv.config({ path: '../../../env' });
 
 export default defineConfig({
   build: {
